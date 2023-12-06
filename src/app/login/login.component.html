@@ -1,0 +1,33 @@
+
+<div class="login-container">
+  <div class="login-form">
+    <h3 class="te">Welcome Back!</h3><br>
+    <form [formGroup]="loginForm" (ngSubmit)="Login()">
+      <div class="input-container">
+        <div class="icon-container">
+          <img src="https://static.vecteezy.com/system/resources/previews/000/571/088/original/vector-mail-icon.jpg" alt="Email Icon">
+        </div>
+        <input placeholder="Email" class="custom-input" formControlName="email">
+        <div *ngIf="loginForm.get('email')!.hasError('required') && loginForm.get('email')!.touched" class="error">
+          Email is required.
+        </div>
+        <div *ngIf="loginForm.get('email')!.hasError('email') && loginForm.get('email')!.touched" class="error">
+          Please enter a valid email address.
+        </div>
+      </div>
+      <br>
+      <div class="input-container">
+        <div class="ico-container">
+          <img src="https://th.bing.com/th/id/OIP.Quu8js0NFVCmWWGTKb3yfwAAAA?rs=1&pid=ImgDetMain" alt="password Icon">
+        </div>
+        <input placeholder="Password" type="password" class="custom-input" formControlName="password">
+        <div *ngIf="loginForm.get('password')!.hasError('required') && loginForm.get('password')!.touched" class="error">
+          Password is required.
+        </div>
+      </div>
+      <br>
+      <button type="submit" class="custom-button">Submit</button>
+      <a class="forgot-password" routerLink="/signup">New User ?</a>
+    </form>
+  </div>
+</div>

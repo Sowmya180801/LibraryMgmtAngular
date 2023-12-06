@@ -1,0 +1,17 @@
+<button type="button" class="btn btn-secondary" routerLink="/addbook" style="margin :1%;">Add Book</button>
+
+<div class="book-container">
+  <div *ngFor="let bookItem of allBooks" class="book-box">
+    <h2 >{{ bookItem.title }}</h2>
+    <img src="{{bookItem.bookimg}}" style="width: 45%; height: 45%;">
+    <p><strong>Author:</strong> {{ bookItem.author }}</p>
+    <p><strong>Genre:</strong> {{ bookItem.genre }}</p>
+    <p><strong>Total: </strong>{{bookItem.totalcopies}}</p>
+    <!-- <p><strong>Publish Date:</strong> {{ bookItem.publishdate | date:'MMM dd, yyyy'}}</p> -->
+    <div class="button-container">
+      <button type="button" class="btn btn-primary" [routerLink]="['/singlebook/', bookItem.bookid]">View</button>
+      <button type="button" class="btn btn-secondary" [routerLink]="['/updatebook/', bookItem.bookid]">Update</button>
+      <button type="button" (click)="deleteBook(bookItem.bookid)" class="btn btn-danger">Delete</button>
+    </div>
+  </div>
+</div>

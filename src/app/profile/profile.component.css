@@ -1,0 +1,18 @@
+.user-details-container {
+    margin-left: 4%;
+    margin-top: 2%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-title {
+    color: #007bff;
+  }
+  
+  .user-info {
+    margin-top: 15px;
+  }
+ 
+  

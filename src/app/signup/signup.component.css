@@ -1,0 +1,63 @@
+.signup-container {
+    background-image: url('https://static.wixstatic.com/media/46565e_7d6bd057d12a48fd969e67d61e415619~mv2.png/v1/fill/w_796,h_448,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/46565e_7d6bd057d12a48fd969e67d61e415619~mv2.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .signup-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    margin-bottom: 15px;
+  }
+  
+  .custom-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .custom-button {
+    width: 50%;
+    padding: 10px;
+    margin-left: 26%;
+    border: none;
+    border-radius: 5px;
+    background-color: #57ed6e;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .validation-message {
+    color: red;
+    margin-top: 5px;
+  }
+  
+  .forgot-password {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  

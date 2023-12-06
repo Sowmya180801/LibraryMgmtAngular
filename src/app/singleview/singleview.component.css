@@ -1,0 +1,36 @@
+
+.book-details-container {
+    display: flex;
+    margin-left: 4%;
+    margin-top: 2%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .book-image {
+    flex: 1;
+  }
+  
+  .book-image img {
+    width: 70%;
+    height: auto;
+  }
+  
+  .book-info {
+    flex: 2;
+    padding-left: 0%;
+  }
+  
+  .book-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  /* Optional: Add hover effect for a more interactive feel */
+  .book-details-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+  }
+  

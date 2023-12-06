@@ -1,0 +1,35 @@
+
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .book-box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .book-box img {
+    margin-bottom: 10px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .book-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+  }
+  

@@ -1,0 +1,71 @@
+<div class="add-book-card">
+    <h2>Add a New Book</h2>
+    <form [formGroup]="addBookForm" (ngSubmit)="onSubmit()">
+      <label>Title:</label>
+      <input type="text" formControlName="title">
+      <div *ngIf="addBookForm.get('title')!.hasError('required') && addBookForm.get('title')!.touched" class="error">
+        Title is required.
+      </div>
+  
+      <label>Author:</label>
+      <input type="text" formControlName="author">
+      <div *ngIf="addBookForm.get('author')!.hasError('required') && addBookForm.get('author')!.touched" class="error">
+        Author is required.
+      </div>
+  
+      <label>Description:</label>
+      <textarea formControlName="description"></textarea>
+      <div *ngIf="addBookForm.get('description')!.hasError('required') && addBookForm.get('description')!.touched" class="error">
+        Description is required.
+      </div>
+  
+      <label>Image URL:</label>
+      <input type="text" formControlName="bookimg">
+      <div *ngIf="addBookForm.get('bookimg')!.hasError('required') && addBookForm.get('bookimg')!.touched" class="error">
+        Image URL is required.
+      </div>
+  
+      <label>Genre:</label>
+      <input type="text" formControlName="genre">
+      <div *ngIf="addBookForm.get('genre')!.hasError('required') && addBookForm.get('genre')!.touched" class="error">
+        Genre is required.
+      </div>
+  
+      <label>ISBN:</label>
+      <input type="number" formControlName="isbn">
+      <div *ngIf="addBookForm.get('isbn')!.hasError('required') && addBookForm.get('isbn')!.touched" class="error">
+        ISBN is required.
+      </div>
+      <div *ngIf="addBookForm.get('isbn')!.hasError('min') && addBookForm.get('isbn')!.touched" class="error">
+        ISBN cannot be negative.
+      </div>
+  
+      <label>Publish Date:</label>
+      <input type="date" formControlName="publishdate">
+      <div *ngIf="addBookForm.get('publishdate')!.hasError('required') && addBookForm.get('publishdate')!.touched" class="error">
+        Publish Date is required.
+      </div>
+      <div *ngIf="addBookForm.get('publishdate')!.hasError('pastDate') && addBookForm.get('publishdate')!.touched" class="error">
+        Publish Date must be in the past.
+      </div>
+
+      <label>Publisher:</label>
+      <input type="text" formControlName="publisher">
+      <div *ngIf="addBookForm.get('publisher')!.hasError('required') && addBookForm.get('publisher')!.touched" class="error">
+        Publisher is required.
+      </div>
+
+      <label>Total Copies:</label>
+      <input type="number" formControlName="totalcopies">
+      <div *ngIf="addBookForm.get('totalcopies')!.hasError('required') && addBookForm.get('totalcopies')!.touched" class="error">
+        Total copies is required.
+      </div>
+      <div *ngIf="addBookForm.get('totalcopies')!.hasError('min') && addBookForm.get('totalcopies')!.touched" class="error">
+        Total copies must be a positive number.
+      </div>
+      
+  
+      <button type="submit">Add Book</button>
+    </form>
+  </div>
+  

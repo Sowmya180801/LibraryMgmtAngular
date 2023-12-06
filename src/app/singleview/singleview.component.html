@@ -1,0 +1,16 @@
+<div *ngIf="book" class="book-details-container">
+  <div class="book-image">
+    <img [src]="book.bookimg" alt="{{ book.title }}">
+  </div>
+  <div class="book-info">
+    <h2>{{ book.title }}</h2>
+    <p><strong>Author:</strong> {{ book.author }}</p>
+    <p><strong>Description:</strong> {{ book.description }}</p>
+    <p><strong>Genre:</strong> {{ book.genre }}</p>
+    <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+    <p><strong>Publish Date:</strong> {{ book.publishdate }}</p>
+    <p><strong>Published By:</strong> {{ book.publisher }}</p>
+    <p><strong>Total Copies:</strong> {{ book.totalcopies }}</p>
+    <button type="button" class="btn btn-info" (click)="buyBook()">Buy</button>
+  </div>
+</div>

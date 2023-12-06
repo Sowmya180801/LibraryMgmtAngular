@@ -1,0 +1,58 @@
+<h2 style="text-align: center; padding:5px">Update Book Details</h2>
+<div class="update-book-container">
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <div class="form-col">
+        <label>Title:</label>
+        <input type="text" [formControl]="titleControl">
+      </div>
+      <div class="form-col">
+        <label>Author:</label>
+        <input type="text" [formControl]="authorControl">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-col">
+        <label>Description:</label>
+        <textarea [formControl]="descriptionControl"></textarea>
+      </div>
+      <div class="form-col">
+        <label>Image URL:</label>
+        <input type="text" [formControl]="bookimgControl">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-col">
+        <label>Genre:</label>
+        <input type="text" [formControl]="genreControl">
+      </div>
+      <div class="form-col">
+        <label>ISBN:</label>
+        <input type="number" [formControl]="isbnControl">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-col">
+        <label>Publish Date:</label>
+        <input type="date" [formControl]="publishdateControl">
+      </div>
+      <div class="form-col">
+        <label>Published By:</label>
+        <input type="text" [formControl]="publisherControl">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-col">
+        <label>Total Copies:</label>
+        <input type="number" [formControl]="totalcopiesControl">
+      </div>
+    </div>
+
+    <button type="submit" style="padding: 5px;">Update Book</button>
+  </form>
+</div>

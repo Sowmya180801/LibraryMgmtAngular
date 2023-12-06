@@ -1,0 +1,33 @@
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">LibraryMgmt</a>
+      </div>
+      <ul class="nav navbar-nav">
+          <li class="active"><a *ngIf="IsLoggedIn" routerLink="/books" class="ml-3">Dashboard</a></li>
+      </ul>
+      
+  
+      <div *ngIf="!IsLoggedIn" class="dropdown">
+        <div class="dropdown-content">
+          <a routerLink="/login">Login</a>
+          <a> . </a>
+          <a routerLink="/signup">Signup</a>
+        </div>
+      </div>
+
+  
+      <div *ngIf="IsLoggedIn" class="dropdown">
+        <button  type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          Welcome, {{ username }}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="userDropdown">
+          <li ><a class="dropdown-item" [routerLink]="['/profile/', id]" >Profile</a></li> 
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" (click)="Logout()">Logout</a></li>
+        </ul>
+      </div>    
+    </div>
+  </nav>
+  
+  

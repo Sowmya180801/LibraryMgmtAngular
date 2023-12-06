@@ -1,0 +1,48 @@
+<div class="signup-container">
+  <div class="signup-form">
+    <form [formGroup]="signupForm" (ngSubmit)="submit()">
+      <div class="input-container">
+        <input type="text" id="username" placeholder="username" class="custom-input" formControlName="username">
+        <div *ngIf="signupForm.get('username')!.hasError('required') && signupForm.get('username')!.touched" class="validation-message">
+          Username is required.
+        </div>
+      </div>
+ 
+
+      <div class="input-container">
+        <input type="email" id="email" placeholder="enter your email" class="custom-input" formControlName="email">
+        <div *ngIf="signupForm.get('email')!.hasError('required') && signupForm.get('email')!.touched" class="validation-message">
+          Email is required.
+        </div>
+        <div *ngIf="f['email'].errors && f['email'].errors['invalidEmail']">
+          <small>Invalid Email format</small>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <input type="password" id="password" placeholder="enter your password" class="custom-input" formControlName="password">
+        <div *ngIf="signupForm.get('password')!.hasError('required') && signupForm.get('password')!.touched" class="validation-message">
+          Password is required.
+        </div>
+      </div>
+
+
+      <div class="input-container">
+        <input type="password" id="confirmPassword" placeholder="enter confirmPassword" class="custom-input" formControlName="confirmPassword">
+        <div *ngIf="signupForm.get('confirmPassword')!.hasError('required') && signupForm.get('confirmPassword')!.touched" class="validation-message">
+          Confirm Password is required.
+        </div>
+      </div>
+        <div class="input-container">
+        <input type="text" id="contact" placeholder="enter your contact num" class="custom-input" formControlName="contact">
+        <div *ngIf="signupForm.get('contact')!.hasError('required') && signupForm.get('contact')!.touched" class="validation-message">
+          Contact is required.
+        </div>
+      </div>
+ 
+
+      <button type="submit" class="custom-button" [disabled]="signupForm.invalid">Sign Up</button>
+      <a class="forgot-password" routerLink="/login">Already have an account?</a>
+    </form>
+  </div>
+</div>
